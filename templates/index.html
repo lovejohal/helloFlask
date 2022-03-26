@@ -1,0 +1,21 @@
+<!Doctype html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>helloFlask</title>
+			<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/main.css')}}">
+		</head>
+		<body>
+			<img src="https://raw.githubusercontent.com/lovejohal/helloFlask/main/helloFlask.png">
+			<br>
+			<form action="re" method="POST">
+				{% for message in get_flashed_messages() %}
+				<p>{{message}}</p>
+				{% endfor %}
+				<br>
+				<input type="text" name="name" id="name">
+				<br>
+				<input type="submit" value="Submit" id="submit">
+
+		</body>
+	</html>
